@@ -85,9 +85,6 @@ if __name__ == "__main__":
             print('Send Token')
             tokenAddressToken = parts[1].strip()
             withdrawTokenAddresses.append(tokenAddressToken)
-        else:
-            print('.env format invalid')
-            exit(0)
 
     # process transaction
     signedTransactionsBundle = []
