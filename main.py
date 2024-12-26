@@ -32,7 +32,7 @@ if __name__ == "__main__":
         os.remove(file_path)
 
     w3 = Web3(Web3.HTTPProvider(config.RPC))
-    chainid = 56
+    chainid = 8453
     gasprice = 3000000000
 
     with open('.env', 'r') as file:
@@ -103,7 +103,7 @@ if __name__ == "__main__":
         "params": [{"txs": signedTransactionsBundle, "maxTimestamp": max_timestamp}],
         "id": 1
     }
-    api_url = 'https://rpc.ankr.com/bsc'
+    api_url = 'https://mempool.merkle.io/rpc/base'
     headers = {'Content-Type': 'application/json'}
     response = requests.post(api_url, data=json.dumps(bundle), headers=headers)
     print(response.json())
